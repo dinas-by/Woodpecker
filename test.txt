@@ -1,0 +1,15 @@
+Host: google.by
+
+Set: First case
+GET /
+
+Set: Second case
+POST /test
+{
+    "first_name": %% quote_string 2,15 %%,
+    "family_name": %% quote_string 5,6 %%,
+    "age": %% int 18,100 %%
+}
+
+Set: Third case
+GET /blah-blah
